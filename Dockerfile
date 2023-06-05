@@ -12,8 +12,8 @@ ENV ENV_PACKER_VERSION=${PACKER_VERSION}
 RUN apt-get clean && rm -R /var/lib/apt/lists/* \ 
     && apt-get update
 
-RUN apt-get update && \
-    apt-get install \
+RUN apt-get update --yes && \
+    apt-get --yes install \
       coreutils \
       curl \
       direnv \
