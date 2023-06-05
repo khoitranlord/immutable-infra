@@ -9,7 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV ENV_TERRAFORM_VERSION=${TERRAFORM_VERSION}
 ENV ENV_PACKER_VERSION=${PACKER_VERSION}
 
-RUN apt-get clean && rm -R /var/lib/apt/lists/* \ 
+RUN apt-get clean && rm -R --force /var/lib/apt/lists/* \ 
     && apt-get update
 
 RUN apt-get update --yes && \
