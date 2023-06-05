@@ -9,6 +9,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV ENV_TERRAFORM_VERSION=${TERRAFORM_VERSION}
 ENV ENV_PACKER_VERSION=${PACKER_VERSION}
 
+RUN apt-get clean && rm -R /var/lib/apt/lists/*
+
 RUN apt-get update --yes --fix-missing && \
     apt-get install --yes \
       coreutils \
