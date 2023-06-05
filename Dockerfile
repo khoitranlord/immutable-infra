@@ -9,7 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV ENV_TERRAFORM_VERSION=${TERRAFORM_VERSION}
 ENV ENV_PACKER_VERSION=${PACKER_VERSION}
 
-RUN apt-get update --yes && \
+RUN apt-get update --yes --fix-missing && \
     apt-get install --yes \
       coreutils \
       curl \
