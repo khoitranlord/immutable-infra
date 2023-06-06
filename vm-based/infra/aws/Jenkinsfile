@@ -9,7 +9,7 @@ pipeline {
 
   agent {
     dockerfile {
-      additionalBuildArgs '${DOCKER_NO_CACHE} --tag "packer-demo/jenkins-agent:${IMG_LABEL}" --build-arg "TERRAFORM_VERSION=${TERRAFORM_VERSION}" --build-arg "PACKER_VERSION=${PACKER_VERSION}" --build-arg "USER_ID=$(USER_ID) --build-arg "GROUP_ID=$(GROUP_ID)"'
+      additionalBuildArgs '${DOCKER_NO_CACHE} --tag "packer-demo/jenkins-agent:${IMG_LABEL}" --build-arg "TERRAFORM_VERSION=${TERRAFORM_VERSION}" --build-arg "PACKER_VERSION=${PACKER_VERSION}"'
     }
   }
   environment {
